@@ -32,6 +32,8 @@ public class BaseSuper {
 			
 			driver = new ChromeDriver(); 
 			
+			
+			
 		} 
 		
 		else if (browserType.equalsIgnoreCase("firefox")) {
