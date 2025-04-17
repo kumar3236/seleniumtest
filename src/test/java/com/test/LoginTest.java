@@ -22,11 +22,12 @@ public class LoginTest extends BaseSuper {
 		
 		 WebDriverManager.chromedriver().browserVersion("135.0.7049.42").setup();
 	        WebDriver driver = new ChromeDriver();
-		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"); 
+	        driver.manage().window().maximize();
+		driver.get("https://opensource-demo.orangehrmlive.com/"); 
 		 loginPage = new Login(driver);
 		} 
 	  @Test 
-	  public void testLogin() {
+	  public void testLogin() throws InterruptedException {
 		  
 		// Test case for logging in 
 		  loginPage.enterUserName("Admin");
