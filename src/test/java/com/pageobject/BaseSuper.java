@@ -59,6 +59,8 @@ public class BaseSuper {
 	        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	    }
 
+	 
+	 
 	 public static void capturePageDetails(WebDriver driver, String screenshotFilePath) {
 	        try {
 	            // Print the page source to the console
