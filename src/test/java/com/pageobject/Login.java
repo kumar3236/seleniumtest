@@ -18,16 +18,12 @@ public class Login extends BaseSuper {
 	
 	public void enterUserName(String username) throws InterruptedException {
 	//	base.waitForElement(driver, userName, 10); 
-		Thread.sleep(10000);
+		Thread.sleep(1000);
 		WebElement userNameInput = driver.findElement(userName);
 		userNameInput.sendKeys(username); 
 		String text=userNameInput.getText();
 		System.out.println(text);
 		
-		
-		//base.waitForElement(driver, userName, 10);
-		
-		//base.action(userNameInput, username);
 		} 
 	
 	public void enterPassword(String password) {
