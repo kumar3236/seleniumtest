@@ -29,11 +29,7 @@
   </dependencyManagement>
 
   <dependencies>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-api</artifactId>
-      <scope>test</scope>
-    </dependency>
+   
 <dependency>
     <groupId>io.github.bonigarcia</groupId>
     <artifactId>webdrivermanager</artifactId>
@@ -78,7 +74,27 @@
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.3.1</version>
         </plugin>
-        
+         <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <version>3.3.0</version>
+      <configuration>
+        <suiteXmlFiles>
+          <suiteXmlFile>testng.xml</suiteXmlFile>
+        </suiteXmlFiles>
+        <properties>
+          <property>
+            <name>listener</name>
+            <value>org.testng.TestNG</value>
+          </property>
+        </properties>
+        <providers>
+          <provider>
+            <name>testng</name>
+          </provider>
+        </providers>
+      </configuration>
+    </plugin>
     
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
@@ -104,22 +120,27 @@
       </plugins>
     </pluginManagement>
     <plugins>
-    <plugin>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-surefire-plugin</artifactId>
-  <version>3.3.0</version>
-  <configuration>
-    <suiteXmlFiles>
-      <suiteXmlFile>testng.xml</suiteXmlFile>
-    </suiteXmlFiles>
-    <properties>
-      <property>
-        <name>listener</name>
-        <value>org.testng.TestNG</value>
-      </property>
-    </properties>
-  </configuration>
-</plugin>
+     <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <version>3.3.0</version>
+      <configuration>
+        <suiteXmlFiles>
+          <suiteXmlFile>testng.xml</suiteXmlFile>
+        </suiteXmlFiles>
+        <properties>
+          <property>
+            <name>listener</name>
+            <value>org.testng.TestNG</value>
+          </property>
+        </properties>
+        <providers>
+          <provider>
+            <name>testng</name>
+          </provider>
+        </providers>
+      </configuration>
+    </plugin>
     </plugins>
   </build>
 </project>
