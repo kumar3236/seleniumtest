@@ -39,7 +39,7 @@ public class LoginTest extends BaseSuper {
 		     String dashboardText=loginPage.clickLoginButton(); 
 		     String expectedTitle = "Dashboard";
 		  
-		    Assert.assertEquals(dashboardText, expectedTitle, "Login failed: Title mismatch");
+		    Assert.assertEquals(dashboardText, expectedTitle, "Login pass: Title match");
 		  // Add assertions as needed to verify successful login (e.g., checking page title) 
 		  } 
 	   

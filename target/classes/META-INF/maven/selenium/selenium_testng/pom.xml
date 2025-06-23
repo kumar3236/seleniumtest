@@ -47,20 +47,19 @@
     <scope>test</scope>
 </dependency>
 
-
-
-<dependency>
+  <!-- Cucumber & Selenium (if you need them) -->
+  <dependency>
     <groupId>io.cucumber</groupId>
     <artifactId>cucumber-java</artifactId>
-    <version>7.14.0</version> <!-- Use the latest version -->
-</dependency>
+    <version>7.14.0</version>
+  </dependency>
 
-
-<dependency>
+  <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>4.11.0</version> <!-- Ensure you're using the latest version -->
-</dependency>
+    <version>4.11.0</version>
+  </dependency>
+
 
     
     
@@ -105,16 +104,22 @@
       </plugins>
     </pluginManagement>
     <plugins>
-     <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-surefire-plugin</artifactId>
-      <version>3.3.0</version>
-      <configuration>
-        <suiteXmlFiles>
-          <suiteXmlFile>testng.xml</suiteXmlFile>
-        </suiteXmlFiles>
-      </configuration>
-    </plugin>
+    <plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-surefire-plugin</artifactId>
+  <version>3.3.0</version>
+  <configuration>
+    <suiteXmlFiles>
+      <suiteXmlFile>testng.xml</suiteXmlFile>
+    </suiteXmlFiles>
+    <properties>
+      <property>
+        <name>listener</name>
+        <value>org.testng.TestNG</value>
+      </property>
+    </properties>
+  </configuration>
+</plugin>
     </plugins>
   </build>
 </project>
