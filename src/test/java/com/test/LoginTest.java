@@ -21,8 +21,8 @@ public class LoginTest extends BaseSuper {
 	@BeforeMethod 
 	public void setUp() {
 		
-		
-		 WebDriverManager.chromedriver().browserVersion("137.0.7151.120").setup();
+		//browserVersion("138.0.7151.120")
+		 WebDriverManager.chromedriver().setup();
 	        WebDriver driver = new ChromeDriver();
 	        driver.manage().window().maximize();
 		driver.get("https://opensource-demo.orangehrmlive.com/"); 
