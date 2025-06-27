@@ -42,6 +42,8 @@ public class LoginTest extends BaseSuper {
 		    Assert.assertEquals(dashboardText, expectedTitle, "Login pass: Title match");
 		  // Add assertions as needed to verify successful login (e.g., checking page title) 
 		    //testngtest
+		    //testcucu
+
 		  } 
 	   
 
